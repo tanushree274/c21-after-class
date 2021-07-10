@@ -7,9 +7,9 @@ function setup() {
  // createSprite(400, 200, 50, 50);
   thickness=random(22,83);
 bullet =createSprite(50,200,50,10);
-wall= createSprite (1200,200,thickness,100);
+wall= createSprite (600,200,thickness,100);
 
-speed=random(223,321);
+speed=random(10,20);
 weight=random(30,52);
 
 bullet.velocityX =speed;
@@ -22,17 +22,17 @@ function draw() {
     bullet.velocityX=0;
     var deformation=0.5*weight * speed * speed/22509;
      if(deformation>180){
-  bullet.shapeColor="white";
+  bullet.shapeColor="pink";
   
     }
   
     if(deformation<180 && deformation>100){
-  bullet.shapeColor="white";
+  bullet.shapeColor="green";
   
     }
   
     if(deformation<100){
-  bullet.shapeColor="white";
+  bullet.shapeColor="yellow";
     }
   }
   if (hasCollided(bullet,wall)){
